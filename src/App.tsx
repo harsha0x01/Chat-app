@@ -13,6 +13,7 @@ import { ActivityFeed } from './views/ActivityFeed';
 import { AnalyticsDashboard } from './views/Analytics';
 import { SettingsView } from './views/Settings';
 import { DirectoryView } from './views/Directory';
+import { PWAInstallButton } from './components/PWAInstallButton';
 import { MessageSquare, Lock } from 'lucide-react';
 
 function AppContent() {
@@ -43,10 +44,12 @@ function AppContent() {
           
           <button 
             onClick={signIn}
-            className="w-full bg-slate-900 hover:bg-slate-800 dark:bg-emerald-600 dark:hover:bg-emerald-700 text-white font-medium py-3.5 px-4 rounded-xl transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2"
+            className="w-full bg-slate-900 hover:bg-slate-800 dark:bg-emerald-600 dark:hover:bg-emerald-700 text-white font-medium py-3.5 px-4 rounded-xl transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2 mb-4"
           >
             Sign in with Google
           </button>
+
+          <PWAInstallButton />
           
           <div className="mt-8 flex items-center justify-center gap-1.5 text-xs text-slate-400 font-medium uppercase tracking-wider">
             <Lock className="w-3.5 h-3.5" />

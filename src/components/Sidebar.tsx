@@ -4,6 +4,7 @@ import { useI18n } from '../contexts/I18nContext';
 import { cn } from '../lib/utils';
 import { logActivity } from '../lib/activity';
 import { db } from '../lib/firebase';
+import { PWAInstallButton } from './PWAInstallButton';
 
 interface SidebarProps {
   currentView: string;
@@ -57,7 +58,10 @@ export function Sidebar({ currentView, onViewChange }: SidebarProps) {
         ))}
       </nav>
 
-      <div className="pt-4 border-t border-slate-200 dark:border-slate-800">
+      <div className="pt-4 border-t border-slate-200 dark:border-slate-800 space-y-4">
+        <div className="hidden md:block">
+          <PWAInstallButton />
+        </div>
         <button
           onClick={handleLogout}
           className="w-full flex items-center gap-3 px-3 py-3 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-red-50 hover:text-red-600 dark:hover:bg-red-900/20 dark:hover:text-red-400 transition-all"
