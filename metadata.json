@@ -1,0 +1,11 @@
+{
+  "name": "CipherChat",
+  "description": "Secure, cross-platform chatting app with end-to-end encryption, offline mode, and analytics.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
